@@ -1,9 +1,0 @@
-name: 2BN-LowestLibrarians
-version: 1.1.0
-main: dev.twobeardednomads.lowestlibrarians.LowestLibrariansPlugin
-api-version: '1.21'
-authors:
-  - TwoBeardedNomads
-description: Highlights cheapest maximum-level librarian enchanted book trades.
-depend:
-  - UltimateAdvancementAPI
