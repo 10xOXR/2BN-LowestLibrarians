@@ -1,0 +1,10 @@
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/LowestLibrariansPlugin.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/domain/CheapestBookOffer.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/evaluation/BookOfferEvaluator.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/formatting/EnchantmentDisplayFormatter.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/listener/LibrarianTradeOpenListener.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/notification/CheapestBookNotifier.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/notification/CheapestBookToastNotifier.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/pricing/BookPriceRules.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/scanning/LibrarianTradeOfferScanner.java
+/home/chris/coding/minecraft/plugins/2BN-LowestLibrarians/src/main/java/dev/twobeardednomads/lowestlibrarians/service/LibrarianDealFinder.java
