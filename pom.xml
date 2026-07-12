@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.twobeardednomads</groupId>
-    <artifactId>2bn-lowestlibrarians</artifactId>
+    <artifactId>2BN-LowestLibrarians</artifactId>
     <version>1.1.0</version>
     <packaging>jar</packaging>
 
-    <name>2bn-lowestlibrarians</name>
+    <name>2BN-LowestLibrarians</name>
 
     <properties>
         <java.version>25</java.version>
