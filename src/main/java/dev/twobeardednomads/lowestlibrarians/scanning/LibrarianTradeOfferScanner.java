@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.MerchantRecipe;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -20,23 +21,27 @@ public final class LibrarianTradeOfferScanner {
   public Optional<CheapestBookOffer> findCheapestBookOffer(MerchantRecipe merchantRecipe) {
     Objects.requireNonNull(merchantRecipe, "merchantRecipe must not be null");
 
-    Optional<Integer> displayedEmeraldPrice = findDisplayedEmeraldPrice(merchantRecipe);
-    if (displayedEmeraldPrice.isEmpty()) {
+    Optional<Integer> originalEmeraldPrice = findOriginalEmeraldPrice(merchantRecipe);
+    if (originalEmeraldPrice.isEmpty()) {
       return Optional.empty();
     }
 
     ItemStack resultItem = merchantRecipe.getResult();
-    return bookOfferEvaluator.evaluate(resultItem, displayedEmeraldPrice.get());
+    return bookOfferEvaluator.evaluate(resultItem, originalEmeraldPrice.get());
   }
 
-  private Optional<Integer> findDisplayedEmeraldPrice(MerchantRecipe merchantRecipe) {
-    ItemStack adjustedFirstIngredient = merchantRecipe.getAdjustedIngredient1();
-
-    if (!isEmeraldStack(adjustedFirstIngredient)) {
+  private Optional<Integer> findOriginalEmeraldPrice(MerchantRecipe merchantRecipe) {
+    List<ItemStack> ingredients = merchantRecipe.getIngredients();
+    if (ingredients.isEmpty()) {
       return Optional.empty();
     }
 
-    return Optional.of(adjustedFirstIngredient.getAmount());
+    ItemStack firstIngredient = ingredients.getFirst();
+    if (!isEmeraldStack(firstIngredient)) {
+      return Optional.empty();
+    }
+
+    return Optional.of(firstIngredient.getAmount());
   }
 
   private boolean isEmeraldStack(ItemStack itemStack) {
