@@ -1,5 +1,5 @@
 name: 2BN-LowestLibrarians
-version: 1.1.1
+version: 1.2.0
 main: dev.twobeardednomads.lowestlibrarians.LowestLibrariansPlugin
 api-version: '1.21'
 authors:

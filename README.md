@@ -15,8 +15,8 @@ When a player opens an untraded librarian's merchant inventory, the plugin scans
 
 ## Requirements
 
-- Paper API target: `26.2.build.96-stable`
-- Minecraft support: `26.2` and newer compatible Paper releases
+- Paper API target: `26.3`
+- Minecraft support: `26.3` and newer compatible Paper releases
 - Java: `25`
 - Runtime dependency: `UltimateAdvancementAPI`
 
@@ -33,7 +33,7 @@ The plugin declares `UltimateAdvancementAPI` as a required Bukkit dependency, so
 2. Copy the shaded plugin jar into your server's `plugins` directory:
 
    ```sh
-   target/2BN-LowestLibrarians-1.1.1.jar
+   target/2BN-LowestLibrarians-1.2.0.jar
    ```
 
 3. Install `UltimateAdvancementAPI` on the same server.
@@ -79,10 +79,16 @@ The notification also plays a vault shutter sound and two bell resonance sounds.
 
 ## Development
 
-Build the default Minecraft 26.2 profile:
+Build the default Minecraft 26.3 profile:
 
 ```sh
 mvn clean package
+```
+
+Build with the alternate `minecraft-26.2` profile:
+
+```sh
+mvn clean package -Pminecraft-26.2
 ```
 
 Build with the alternate legacy `minecraft-1.21` profile:

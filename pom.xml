@@ -6,7 +6,7 @@
 
     <groupId>dev.twobeardednomads</groupId>
     <artifactId>2BN-LowestLibrarians</artifactId>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
 
     <name>2BN-LowestLibrarians</name>
@@ -14,8 +14,8 @@
     <properties>
         <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <paper.api.version>26.2.build.96-stable</paper.api.version>
-        <minecraft.version>26.2</minecraft.version>
+        <paper.api.version>[26.3.build,)</paper.api.version>
+        <minecraft.version>26.3</minecraft.version>
     </properties>
 
     <build>
@@ -54,12 +54,19 @@
 
     <profiles>
         <profile>
-            <id>minecraft-26.2</id>
+            <id>minecraft-26.3</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <paper.api.version>26.2.build.96-stable</paper.api.version>
+                <paper.api.version>[26.3.build,)</paper.api.version>
+                <minecraft.version>26.3</minecraft.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>minecraft-26.2</id>
+            <properties>
+                <paper.api.version>[26.2.build,)</paper.api.version>
                 <minecraft.version>26.2</minecraft.version>
             </properties>
         </profile>
